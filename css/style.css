@@ -172,6 +172,7 @@ border-radius: 50%;
   .subtitle, .switch {
     color: rgb(14, 6, 68);
     text-align:center;
+;
   }
   .title {
     text-align:center;
@@ -187,9 +188,15 @@ border-radius: 50%;
     font-size: 18px;
     letter-spacing: 1px;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    background: #172b8e6e;
+    color: white;
   }
-  
+
+  ::placeholder { 
+    color: rgb(198, 212, 0);
+    opacity: 1; 
+}
   .sub {
     width: 100%;
     color: #ffffff;
