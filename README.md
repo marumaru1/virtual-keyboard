@@ -1,3 +1,3 @@
 # virtual-keyboard
-![virtual-keyboard](https://user-images.githubusercontent.com/101468567/166691626-29a9458f-6c08-472a-aed0-67be0a3fb1e0.png)
+![image](https://user-images.githubusercontent.com/101468567/167311548-27574e37-d8f6-4e28-b696-b9c0984b1f84.png)
 ## https://marumaru1.github.io/virtual-keyboard/
