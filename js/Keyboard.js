@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 /* eslint-disable import/extensions */
-import * as storage from './Sstorage.js';
+import * as storage from './Storage.js';
 import create from './utils/create.js';
 import language from './layouts/index.js';
 import Key from './Key.js';

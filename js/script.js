@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import * as storage from './Sstorage.js';
+import * as storage from './Storage.js';
 import Keyboard from './Keyboard.js';
 
 const rowsOrder = [
