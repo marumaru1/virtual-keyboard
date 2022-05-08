@@ -9,7 +9,7 @@
   }
   
   body {
-    background: linear-gradient(90deg, #9159d4, #450345);
+    background: linear-gradient(90deg, #59bbd4, #ffffff);
   }
   
   main {
@@ -30,7 +30,7 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    border: 3px solid rgb(1, 9, 24);
+    border: 2px solid rgb(78 89 166);
   }
   
   .keyboard__row {
@@ -47,13 +47,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(16, 17, 96) radial-gradient(circle at 0 0, rgba(19, 12, 61, 0.75), rgba(37, 12, 71, 0.35));
-    box-shadow: inset rgba(0,0,0,.75) -1px -1px 2px, inset rgba(255,255,255,.9) 1px 1px 2px, rgba(0,0,0,.8) 1px 1px 2px -1px;
+    background: rgb(9 142 163);
     transition: all .2s ease;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+    border: 1px solid rgb(0 0 0 / 49%);
+    box-shadow: inset rgb(3 4 20 / 75%) -1px -1px 2px, inset rgb(68 79 183 / 90%) 1px 1px 2px, rgb(0 0 0 / 80%) 1px 1px 2px -1px;
+
+
+
   }
   
   [data-fn="false"].active {
@@ -75,7 +79,7 @@
   }
   
   [data-fn="true"] {
-    background: rgb(128, 131, 223) radial-gradient(circle at 0 0, rgba(6, 67, 104, 0.65), rgba(15, 10, 82, 0.35));
+    background: rgb(47 142 162) radial-gradient(circle at 0 0, rgba(6, 67, 104, 0.65), rgba(15, 10, 82, 0.35));
     box-shadow: inset rgba(3, 4, 20, 0.75) -1px -1px 2px, inset rgba(68, 79, 183, 0.9) 1px 1px 2px, rgba(0,0,0,.8) 1px 1px 2px -1px;
   }
   
@@ -157,8 +161,13 @@
     transform-origin: center;
   }
   
-  .subtitle, .hint {
-    color: rgb(50, 33, 179);
+  .subtitle, .switch {
+    color: rgb(14, 6, 68);
+    text-align:center;
+  }
+  .title {
+    text-align:center;
+    color: rgb(14, 6, 68);
   }
   
   textarea.output {
@@ -175,7 +184,7 @@
   
   .sub {
     width: 100%;
-    color: #68688a;
+    color: #ffffff;
     text-align: center;
     transition: all .2s ease;
     -webkit-transition: all .2s ease;
