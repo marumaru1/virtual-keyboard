@@ -98,9 +98,9 @@ if (!this.isCaps) {
   this.printToOutput(keyObj, this.shiftKey ? keyObj.shift : keyObj.small);
 } else if (this.isCaps) {
   if (this.shiftKey) {
-    this.printToOutput(keyObj, keyObj.sub.innerHTML ? keyObj.small : keyObj.small);
+    this.printToOutput(keyObj, keyObj.sub.innerHTML ? keyObj.shift : keyObj.small);
   }else {
-    this.printToOutput(keyObj, !keyObj.sub.innerHTML ? keyObj.small : keyObj.small);
+    this.printToOutput(keyObj, !keyObj.sub.innerHTML ? keyObj.shift : keyObj.small);
   }
   }
 
