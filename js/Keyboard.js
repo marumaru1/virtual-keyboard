@@ -61,6 +61,7 @@ export default class Keyboard {
      if (type.match(/key/)) e.preventDefault();
 
      if (code.match(/Shift/)) this.shiftKey = true;
+     if (this.shiftKey) this.switchUpperCase(true);
 
      keyObj.div.classList.add('active');
 
@@ -84,12 +85,19 @@ if (!this.isCaps) {
 
 //button
    } else if (type.match(/keyup|mouseup/)){
-    keyObj.div.classList.remove('active');
-
-    if (code.match(/Shift/)) this.shiftKey = false;
-
+    
+    if (code.match(/Shift/)){ 
+      this.shiftKey = false;
+      this.switchUpperCase(false);
+    }
     if (code.match(/Control/)) this.ctrlKey = false;
     if (code.match(/Alt/)) this.altKey = false;
+
+    
+
+
+    keyObj.div.classList.remove('active');
+
 
    }
   }
@@ -116,6 +124,47 @@ if (keyObj.shift && keyObj.shift.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/g)) {
 button.letter.innerHTML = keyObj.small;
     });
   }
+
+  switchUpperCase(isTrue) {
+    if (isTrue) {
+      this.keyButtons.forEach((button) => {
+        if (button.sub) {
+          if (this.shiftKey)
+{
+            button.sub.classList.add('sub-active');
+            button.letter.classList.add('sub-inactive');
+}       
+ }
+       if (!button.isFnKey && this.isCaps && !this.shiftKey && !button.sub.innerHTML){
+        button.letter.innerHTML = button.shift;
+       } else if (!button.isFnKey && this.isCaps && this.shiftKey){
+        button.letter.innerHTML = button.small;
+       } else if (!button.isFnKey && !button.sub.innerHTML){
+        button.letter.innerHTML = button.shift;
+       }
+      });
+    } else {
+      this.keyButtons.forEach((button) => {
+        if(button.sub.innerHTML && !button.isFnKey) {
+          button.sub.classList.remove('sub-active');
+          button.letter.classList.remove('sub-inactive');
+
+          if (!this.isCaps) {
+            button.letter.innerHTML = button.small;
+          } else if (!this.isCaps) {
+            button.letter.innerHTML = button.shift;
+          }
+          } else if (!button.isFnKey) {
+            if (this.isCaps) {
+              button.letter.innerHTML = button.shift;
+            } else {
+              button.letter.innerHTML = button.small;
+            }
+          }
+      });
+    }
+    }
+
 
 
 
@@ -162,6 +211,7 @@ button.letter.innerHTML = keyObj.small;
   },
  }
 
+ 
  if (fnButtonsHandler[keyObj.code]) fnButtonsHandler[keyObj.code]();
  else if (!keyObj.isFnKey) {
    cursorPos += 1;
@@ -169,4 +219,5 @@ button.letter.innerHTML = keyObj.small;
  }
  this.output.setSelectionRange(cursorPos, cursorPos);
   }
+
 }

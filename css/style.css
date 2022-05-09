@@ -205,40 +205,37 @@ border-radius: 50%;
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     width: 50%;
-    transform-origin: center top;
-    transform: translateX(-20px);
-    -webkit-transform: translateX(-20px);
-    -moz-transform: translateX(-20px);
-    -ms-transform: translateX(-20px);
-    -o-transform: translateX(-20px);
+    font-size: 15px;
+ 
   }
   
   .sub.sub-active:not(:empty) {
-    color: rgb(19, 80, 0);
-    text-align: center;
+  
     padding: 0;
-    font-size: 23px;
+    font-size: 18px;
     width: 50%;
     width: 50%;
-    transform: translateX(-15px);
-    -webkit-transform: translateX(-15px);
-    -moz-transform: translateX(-15px);
-    -ms-transform: translateX(-15px);
-    -o-transform: translateX(-15px);
+
   }
   
   .sub.sub-active:not(:empty) ~ .letter.sub-inactive {
-    color: #68688a;
-    font-size: 16px;
+    font-size: 20px;
+    width: 100%;
     text-align: center;
-    padding-right: 10px;
-    width: 50%;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
     transform-origin: center;
-    transform: translateX(20px);
-    -webkit-transform: translateX(20px);
-    -moz-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    -o-transform: translateX(20px);
+    color: rgba(11, 33, 37, 0.502);
+    
+
   }
   
   @keyframes fadeInOut {
