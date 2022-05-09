@@ -48,14 +48,25 @@ export default class Keyboard {
   
   document.addEventListener('keydown', this.handleEvent);
   document.addEventListener('keyup', this.handleEvent);
+  this.container.onmousedown = this.preHandleEvent;
+  this.container.onmouseup = this.preHandleEvent;
   }
+
+  preHandleEvent = (e) => {
+    e.stopPropagation();
+    const keyDiv = e.target.closest('.keyboard__key');
+    if (!keyDiv) return;
+    const { dataset: { code }} = keyDiv;// const  code = keyDiv.dataset.code;
+    keyDiv.addEventListener('mouseleave', this.resetButtonState);
+    this.handleEvent({ code, type: e.type});
+  };
 
   handleEvent = (e) => {
    if (e.stopPropagation) e.stopPropagation();
    const { code, type } = e;
    const keyObj = this.keyButtons.find((key) => key.code === code);
    if (!keyObj) return;
-   
+   this.output.focus();
 
    if(type.match(/keydown|mousedown/)) {
      if (type.match(/key/)) e.preventDefault();
@@ -65,8 +76,18 @@ export default class Keyboard {
 
      keyObj.div.classList.add('active');
 
+     // handle Caps 
+     if (code.match(/Caps/) && !this.isCaps) {
+     this.isCaps = true;
+     this.switchUpperCase(true);
+   } else if (code.match(/Caps/) && this.isCaps){
+     this.isCaps = false;
+     this.switchUpperCase(false);
+     keyObj.div.classList.remove('active');
+   }
 
-//lang
+
+      //lang
 if (code.match(/Control/)) this.ctrlKey = true;
 if (code.match(/Alt/)) this.altKey = true;
 
@@ -93,10 +114,8 @@ if (!this.isCaps) {
     if (code.match(/Control/)) this.ctrlKey = false;
     if (code.match(/Alt/)) this.altKey = false;
 
-    
 
-
-    keyObj.div.classList.remove('active');
+    if (!code.match(/Caps/)) keyObj.div.classList.remove('active');
 
 
    }
@@ -123,14 +142,15 @@ if (keyObj.shift && keyObj.shift.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/g)) {
 }
 button.letter.innerHTML = keyObj.small;
     });
+
+    if (this.isCaps) this.switchUpperCase(true);
   }
 
   switchUpperCase(isTrue) {
     if (isTrue) {
       this.keyButtons.forEach((button) => {
         if (button.sub) {
-          if (this.shiftKey)
-{
+          if (this.shiftKey){
             button.sub.classList.add('sub-active');
             button.letter.classList.add('sub-inactive');
 }       

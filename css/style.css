@@ -160,15 +160,6 @@ border-radius: 50%;
     width: 100%;
     text-align: center;
     transition: all .2s ease;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform-origin: center;
   }
   
@@ -200,10 +191,6 @@ border-radius: 50%;
     color: #e2fd4ba8;
     text-align: -webkit-right;
     transition: all .2s ease;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    -o-transition: all .2s ease;
     width: 50%;
     font-size: 15px;
  
@@ -223,44 +210,6 @@ border-radius: 50%;
     width: 100%;
     text-align: center;
     transition: all .2s ease;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform-origin: center;
-    color: rgba(11, 33, 37, 0.502);
-    
-
   }
   
-  @keyframes fadeInOut {
-    0% {
-      opacity: 0.5;
-      transform: scale(0.8);
-      -webkit-transform: scale(0.8);
-      -moz-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-      -o-transform: scale(0.8);
-  }
-    50% {
-      opacity: 1;
-      transform: scale(1.5);
-      -webkit-transform: scale(1.5);
-      -moz-transform: scale(1.5);
-      -ms-transform: scale(1.5);
-      -o-transform: scale(1.5);
-  }
-    100% {
-      opacity: 0;
-      transform: scale(2.5);
-      -webkit-transform: scale(2.5);
-      -moz-transform: scale(2.5);
-      -ms-transform: scale(2.5);
-      -o-transform: scale(2.5);
-  }
-  }
