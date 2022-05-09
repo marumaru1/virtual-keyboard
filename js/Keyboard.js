@@ -55,13 +55,35 @@ export default class Keyboard {
    const { code, type } = e;
    const keyObj = this.keyButtons.find((key) => key.code === code);
    if (!keyObj) return;
-   this.output.focus();
+   
 
    if(type.match(/keydown|mousedown/)) {
      if (type.match(/key/)) e.preventDefault();
      keyObj.div.classList.add('active');
+//lang
+if (code.match(/Control/)) this.ctrlKey = true;
+if (code.match(/Alt/)) this.altKey = true;
+
+if (code.match(/Control/) && this.altKey) this.switchLanguage();
+if (code.match(/Alt/) && this.ctrlKey) this.switchLanguage();
+
+
+
    } else if (type.match(/keyup|mouseup/)){
     keyObj.div.classList.remove('active');
+    if (code.match(/Control/)) this.ctrlKey = false;
+    if (code.match(/Alt/)) this.altKey = false;
+
    }
+  }
+
+  switchLanguage = () => {
+    const langAbbr = Object.keys(language); 
+    let langIdx = langAbbr.indexOf(this.container.dataset.language);
+    this.keyBase = langIdx + 1 < langAbbr.length ? language[langAbbr[langIdx += 1]]
+    : language[langAbbr[langIdx -= langIdx]];
+
+    this.container.dataset.language = langAbbr[langIdx];
+    storage.set('kbLang', langAbbr[langIdx]);
   }
 }
