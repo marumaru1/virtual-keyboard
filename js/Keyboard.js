@@ -7,7 +7,7 @@ import language from './layouts/index.js';
 import Key from './Key.js';
 
 const main = create('main', '',
-  [create('h1', 'title', 'My Virtual Keyboard')]);
+  [create('h1', 'title', 'My Virtual Keyboard  ^_^')]);
 
 export default class Keyboard {
   constructor(rowsOrder) {
@@ -44,5 +44,24 @@ export default class Keyboard {
           rowElement.appendChild(keyButton.div);
         }
       });
-    });}
+    });
+  
+  document.addEventListener('keydown', this.handleEvent);
+  document.addEventListener('keyup', this.handleEvent);
+  }
+
+  handleEvent = (e) => {
+   if (e.stopPropagation) e.stopPropagation();
+   const { code, type } = e;
+   const keyObj = this.keyButtons.find((key) => key.code === code);
+   if (!keyObj) return;
+   this.output.focus();
+
+   if(type.match(/keydown|mousedown/)) {
+     if (type.match(/key/)) e.preventDefault();
+     keyObj.div.classList.add('active');
+   } else if (type.match(/keyup|mouseup/)){
+    keyObj.div.classList.remove('active');
+   }
+  }
 }
