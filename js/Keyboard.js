@@ -7,7 +7,7 @@ import language from './layouts/index.js';
 import Key from './Key.js';
 
 const main = create('main', '',
-  [create('h1', 'title', 'My Virtual Keyboard  ^_^')]);
+  [create('h1', 'title', 'My Virtual Keyboard')]);
 
 export default class Keyboard {
   constructor(rowsOrder) {

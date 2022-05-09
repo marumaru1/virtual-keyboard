@@ -10,15 +10,7 @@
   
   body {
     background:
-    radial-gradient(circle at 50% 0,
-      rgba(255,0,0,.5),
-      rgba(255,0,0,0) 70.71%),
-    radial-gradient(circle at 6.7% 75%,
-      rgba(0,0,255,.5),
-      rgba(0,0,255,0) 70.71%),
-    radial-gradient(circle at 93.3% 75%,
-      rgba(0,255,0,.5),
-      rgba(0,255,0,0) 70.71%) beige;
+    radial-gradient(#edf1cf, #43acb4);
 border-radius: 50%;
   }
   
@@ -152,7 +144,7 @@ border-radius: 50%;
   
   
   .active {
-    background: rgb(198, 212, 0);
+    background: rgb(0, 212, 134);
   }
   
   .letter {
