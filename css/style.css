@@ -197,8 +197,8 @@ border-radius: 50%;
   
   .sub {
     width: 100%;
-    color: #ffffff;
-    text-align: center;
+    color: #e2fd4ba8;
+    text-align: -webkit-right;
     transition: all .2s ease;
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;

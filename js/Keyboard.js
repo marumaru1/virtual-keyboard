@@ -85,5 +85,18 @@ if (code.match(/Alt/) && this.ctrlKey) this.switchLanguage();
 
     this.container.dataset.language = langAbbr[langIdx];
     storage.set('kbLang', langAbbr[langIdx]);
+
+    this.keyButtons.forEach((button) => {
+const keyObj = this.keyBase.find((key) => key.code === button.code);
+if (!keyObj) return;
+button.shift = keyObj.shift;
+button.small = keyObj.small;
+if (keyObj.shift && keyObj.shift.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/g)) {
+  button.sub.innerHTML = keyObj.shift;
+} else {
+  button.sub.innerHTML = '';
+}
+button.letter.innerHTML = keyObj.small;
+    });
   }
 }
