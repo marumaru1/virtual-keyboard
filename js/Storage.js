@@ -11,3 +11,4 @@ export function get(name, subst) {
 export function del(name) {
   localStorage.removeItem(name);
 }
+
