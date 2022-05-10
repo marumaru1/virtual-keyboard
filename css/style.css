@@ -9,9 +9,11 @@
   }
   
   body {
-    background:
+    background:url(../css/fonts/grid.png),
     radial-gradient(#edf1cf, #43acb4);
 border-radius: 50%;
+width: 100vw;
+height: 100vh;
   }
   
   main {
@@ -156,13 +158,14 @@ border-radius: 50%;
   }
   
   .subtitle, .switch {
-    color: rgba(120, 114, 154, 0.687);
+    color: rgba(7, 6, 12, 0.687);
     text-align:center;
 ;
   }
   .title {
     text-align:center;
-    color: rgb(14, 6, 68);
+    color: rgb(226 253 75);
+    text-shadow: 1px 1px 1px #000;
   }
   
   textarea.output {
@@ -175,7 +178,7 @@ border-radius: 50%;
     letter-spacing: 1px;
     margin-top: 20px;
     
- 
+    background: #7fffde8c;
   }
   
   .sub {

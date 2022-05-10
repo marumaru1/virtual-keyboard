@@ -8,7 +8,7 @@ import Key from './Key.js';
 
 const main = create('main', '',
   [create('h1', 'title', 'My Virtual Keyboard'),
-  create('h3', 'switch', '(Windows OS, for change language press "left Ctrl + Alt") ')]);
+  create('h4', 'switch', '(Windows OS, for change language press <kbd>"left Ctrl + Alt"</kbd>) ')]);
 
 export default class Keyboard {
   constructor(rowsOrder) {
