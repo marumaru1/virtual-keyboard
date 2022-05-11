@@ -57,7 +57,7 @@ export default class Keyboard {
     e.stopPropagation();
     const keyDiv = e.target.closest('.keyboard__key');
     if (!keyDiv) return;
-    const { dataset: { code }} = keyDiv;// const  code = keyDiv.dataset.code;
+    const { dataset: { code }} = keyDiv;
     keyDiv.addEventListener('mouseleave', this.resetButtonState);
     this.handleEvent({ code, type: e.type});
   };
