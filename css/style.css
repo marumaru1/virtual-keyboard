@@ -9,8 +9,7 @@
   }
   
   body {
-    background:url(../css/fonts/grid.png),
-    radial-gradient(#edf1cf, #43acb4);
+    background: url(../css/fonts/grid.png), radial-gradient(#700961, #000000);
 border-radius: 50%;
 width: 100vw;
 height: 100vh;
@@ -28,7 +27,7 @@ height: 100vh;
     border: 1px solid;
     position: relative;
     overflow: hidden;
-    background: #172b8e6e;
+    background: #040208;
     border-radius: 3px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -51,15 +50,16 @@ height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(9 142 163);
+    background: #000000;
    
 
   
-    box-shadow: inset rgb(3 4 20 / 75%) -1px -1px 2px, inset rgb(68 79 183 / 90%) 1px 1px 2px, rgb(0 0 0 / 80%) 1px 1px 2px -1px;
-
-
-
+    box-shadow: inset rgb(3 4 20 / 75%) -1px -1px 2px, inset #ffffff 1px 1px 2px, rgb(255 255 255) 1px 1px 2px -1px;
   }
+
+
+
+  
   
   [data-fn="false"].active {
     box-shadow: inset 0px 1px 2px 1px rgba(0,0,0,.9), inset 0 0 20px 2em rgba(57, 40, 133, 0.2);
@@ -80,8 +80,8 @@ height: 100vh;
   }
   
   [data-fn="true"] {
-    background: rgb(47 142 162) radial-gradient(circle at 0 0, rgba(6, 67, 104, 0.65), rgba(15, 10, 82, 0.35));
-    box-shadow: inset rgba(3, 4, 20, 0.75) -1px -1px 2px, inset rgba(68, 79, 183, 0.9) 1px 1px 2px, rgba(0,0,0,.8) 1px 1px 2px -1px;
+    background: rgb(67 22 68) radial-gradient(circle at 0 0, rgb(13 15 120 / 87%), rgba(15, 10, 82, 0.35));
+    box-shadow: inset rgb(3 4 20 / 75%) -1px -1px 2px, inset rgb(205 205 205 / 90%) 1px 1px 2px, rgb(255 255 255 / 80%) 1px 1px 2px -1px;
   }
   
   [data-fn="true"] > .letter {
@@ -121,8 +121,8 @@ height: 100vh;
   }
   
   [data-code="Space"] {
-    background: rgb(47 142 162) radial-gradient(circle at 0 0, rgba(6, 67, 104, 0.65), rgba(15, 10, 82, 0.35));
-    box-shadow: inset rgb(3 4 20 / 75%) -1px -1px 2px, inset rgb(68 79 183 / 90%) 1px 1px 2px, rgb(0 0 0 / 80%) 1px 1px 2px -1px;
+    background: #170a35 radial-gradient(circle at 0 0, rgb(43 22 69 / 90%), rgb(10 8 35 / 35%));
+    box-shadow: inset rgb(0 0 0 / 75%) -1px -1px 2px, inset rgb(255 255 255 / 90%) 1px 1px 2px, rgb(255 255 255 / 80%) 1px 1px 2px -1px;
 
 
     width: 420px;
@@ -141,12 +141,12 @@ height: 100vh;
   [data-code="ArrowUp"],
   [data-code="ArrowDown"],
   [data-code="ArrowRight"] {
-    background: rgb(226, 253, 75);
+    background: #470359;
   }
   
   
   .active {
-    background: rgb(0, 212, 134);
+    background: #cc4bfd;
   }
   
   .letter {
@@ -155,17 +155,35 @@ height: 100vh;
     text-align: center;
     transition: all .2s ease;
     transform-origin: center;
+    
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 400;
+
+color: #FFFFFF;
   }
   
   .subtitle, .switch {
     color: rgba(7, 6, 12, 0.687);
     text-align:center;
+        font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 96px;
+    
+    color: #FFFFFF;
 ;
   }
   .title {
     text-align:center;
-    color: rgb(226 253 75);
-    text-shadow: 1px 1px 1px #000;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 96px;
+    
+    color: #FFFFFF;
   }
   
   textarea.output {
@@ -178,16 +196,27 @@ height: 100vh;
     letter-spacing: 1px;
     margin-top: 20px;
     
-    background: #7fffde8c;
+    background: #ffffff;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+
   }
   
   .sub {
     width: 100%;
-    color: #e2fd4ba8;
     text-align: -webkit-right;
     transition: all .2s ease;
     width: 50%;
     font-size: 15px;
+    font-family: 'Aleo';
+font-style: normal;
+font-weight: 400;
+
+color: #fd4be4
  
   }
   
@@ -207,4 +236,6 @@ height: 100vh;
     transition: all .2s ease;
     transform-origin: center;
   }
+
+
   
