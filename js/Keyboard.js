@@ -7,8 +7,7 @@ import language from './layouts/index.js';
 import Key from './Key.js';
 
 const main = create('main', '',
-  [create('h1', 'title', 'My Virtual Keyboard'),
-  create('h4', 'switch', '(Windows OS, for change language press <kbd>"left Ctrl + Alt"</kbd>) ')]);
+  [create('h1', 'title', 'My Virtual Keyboard')]);
 
 export default class Keyboard {
   constructor(rowsOrder) {
@@ -20,7 +19,7 @@ export default class Keyboard {
   init(code) {
     this.keyBase = language[code];
     this.output = create('textarea', 'output', null, main,
-      ['placeholder', 'Write something here my friend'],
+      ['placeholder', 'Write something here my friend. Windows OS, for change language press <kbd>"left Ctrl + Alt"</kbd>'],
       ['rows', 5],
       ['cols', 60],
       ['spellcheck', false],
